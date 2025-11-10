@@ -1,0 +1,15 @@
+-e ./docs/local_package
+
+# MkDocs 核心
+mkdocs==1.6.1
+mkdocs-material==9.6.22
+mkdocs-multirepo-plugin==0.8.3
+mkdocs-glightbox==0.5.2
+
+# Markdown 扩展
+pymdown-extensions>=10.0
+markdown>=3.4.0
+
+# 其他依赖（可选）
+mkdocs-minify-plugin>=0.5.0  # 压缩 HTML
+mkdocs-redirects>=1.2.0     # 重定向支持

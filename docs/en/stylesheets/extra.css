@@ -1,0 +1,15 @@
+/* 调整主内容区域宽度 */
+/* 默认是 61rem，增大此值以加宽 */
+/* .md-main__inner.md-grid {
+  max-width: 90rem;  
+}  */
+
+/* 或完全取消宽度限制（内容占满屏幕） */
+.md-grid {
+  max-width: initial !important;
+}
+
+/* 调整导航栏宽度 */
+.md-sidebar--primary {
+  width: 10rem;  /* 默认是 16rem */
+}

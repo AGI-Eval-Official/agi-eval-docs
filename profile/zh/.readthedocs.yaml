@@ -1,0 +1,15 @@
+version: 2
+# 构建环境
+build:
+  os: ubuntu-22.04
+  tools:
+    python: "3.11"
+
+# 安装依赖
+python:
+  install:
+    - requirements: docs/requirements.txt  # 包含 mkdocs 和 material 主题
+
+# 如果使用 MkDocs
+mkdocs:
+  configuration: profile/zh/mkdocs.yaml

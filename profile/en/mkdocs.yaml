@@ -1,0 +1,70 @@
+site_name: AGI-Eval
+site_url: https://agi-eval-docs.readthedocs.io/en/latest/
+docs_dir: ../../docs/en
+site_dir: ../../site
+theme: 
+  name: material
+  favicon: assets/images/logo_icon.svg
+  logo: assets/images/logo_icon.svg
+  features:
+    # - navigation.tabs 
+    # - navigation.sections
+    - navigation.expand
+    - navigation.instant
+    # - toc.integrate
+    - navigation.path
+
+plugins:
+  - search
+  - glightbox
+  - multirepo:
+      cleanup: true
+      keep_docs_dir: true
+      nav_repos:
+        - name: agi-eval
+          import_url: https://github.com/AGI-Eval-Official/agi-eval
+          imports: ["docs/static", "docs/en"]
+  
+extra_css:
+  - stylesheets/extra.css
+extra:
+  social:
+    - icon: fontawesome/brands/github
+      link: https://github.com/AGI-Eval-Official/agi-eval
+
+markdown_extensions:
+  - markdown.extensions.toc:
+      slugify: !!python/name:pymdownx.slugs.uslugify
+      permalink: "#"
+  - markdown.extensions.sane_lists
+  - pymdownx.highlight:
+      auto_title: true
+  - pymdownx.superfences
+  - pymdownx.tasklist
+  - pymdownx.tilde
+  - pymdownx.mark
+  - attr_list
+  - custom_pathconverter:
+      base_path: docs
+      relative_path: docs/en
+      tags: img
+
+nav:
+  - Welcome: index.md
+  - Open Source Framework:
+    - Quick Start: agi-eval/docs/en/quick_start.md
+    - Framework Overview: agi-eval/docs/en/framework_overview.md
+    - Core Modules:
+      - Dispatch Center: agi-eval/docs/en/component/dispatch_center.md
+      - Plugin System: agi-eval/docs/en/component/plugin_system.md
+      - Configuration Management: agi-eval/docs/en/component/config_manager.md
+    - Tutorials:
+      - Environment Preparation: agi-eval/docs/en/installation.md
+      - Command Line Tools: agi-eval/docs/en/agieval_cli.md
+      - Public Datasets: agi-eval/docs/en/common_dataset.md
+      - Evaluation Results: agi-eval/docs/en/eval_result.md
+      - Model Preparation: agi-eval/docs/en/model_config.md
+      - Start Evaluation: agi-eval/docs/en/start_task.md
+    - Development Guide:
+      - Adapt Datasets: agi-eval/docs/en/custom_dataset.md
+      - Plugin Development Guide: agi-eval/docs/en/component/plugin_guides.md

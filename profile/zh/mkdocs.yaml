@@ -1,0 +1,71 @@
+site_name: AGI-Eval
+site_url: https://agi-eval-docs.readthedocs.io/zh-cn/latest/
+docs_dir: ../../docs/zh
+site_dir: ../../site
+theme: 
+  name: material
+  favicon: assets/images/logo_icon.svg
+  logo: assets/images/logo_icon.svg
+  features:
+    # - navigation.tabs  # 顶部导航栏显示为选项卡
+    # - navigation.sections  # 侧边栏分组
+    - navigation.expand  # 侧边栏默认展开
+    - navigation.instant  # 即时加载（无页面刷新）
+    # - toc.integrate  # 目录集成到侧边栏
+    - navigation.path  # 显示当前页面路径
+
+plugins:
+  - search
+  - glightbox
+  - multirepo:
+      cleanup: true
+      keep_docs_dir: true
+      nav_repos:
+        - name: agi-eval
+          import_url: https://github.com/AGI-Eval-Official/agi-eval
+          imports: ["docs/static", "docs/zh"]
+
+extra_css:
+  - stylesheets/extra.css
+extra:
+  social:
+    - icon: fontawesome/brands/github
+      link: https://github.com/AGI-Eval-Official/agi-eval
+
+markdown_extensions:
+  - markdown.extensions.toc:
+      slugify: !!python/name:pymdownx.slugs.uslugify
+      permalink: "#"
+  - markdown.extensions.sane_lists
+  - pymdownx.highlight:
+      auto_title: true
+  - pymdownx.superfences
+  - pymdownx.tasklist
+  - pymdownx.tilde
+  - pymdownx.mark
+  - attr_list
+  - custom_pathconverter:
+      base_path: docs
+      relative_path: docs/zh
+      tags: img
+
+
+nav:
+  - 欢迎: index.md
+  - 开源框架:
+    - 快速开始: agi-eval/docs/zh/quick_start.md
+    - 框架介绍: agi-eval/docs/zh/framework_overview.md
+    - 核心模块:
+      - 调度中心: agi-eval/docs/zh/component/dispatch_center.md
+      - 插件系统: agi-eval/docs/zh/component/plugin_system.md
+      - 配置管理: agi-eval/docs/zh/component/config_manager.md
+    - 教程:
+      - 环境准备: agi-eval/docs/zh/installation.md
+      - 命令行工具: agi-eval/docs/zh/agieval_cli.md
+      - 公开数据集: agi-eval/docs/zh/common_dataset.md
+      - 评测结果: agi-eval/docs/zh/eval_result.md
+      - 模型准备: agi-eval/docs/zh/model_config.md
+      - 开始评测: agi-eval/docs/zh/start_task.md
+    - 开发指南:
+      - 适配数据集: agi-eval/docs/zh/custom_dataset.md
+      - 插件开发指南: agi-eval/docs/zh/component/plugin_guides.md
