@@ -69,3 +69,5 @@ nav:
     - 开发指南:
       - 适配数据集: agi-eval/docs/zh/custom_dataset.md
       - 插件开发指南: agi-eval/docs/zh/component/plugin_guides.md
+  - 公开数据集:
+    - 已适配数据集: dataset_list.md

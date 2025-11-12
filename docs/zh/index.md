@@ -9,11 +9,13 @@
 
 为了帮助您快速上手和深入了解框架，我们提供了以下文档：
 
-### 📚 用户指南
-- **[快速开始](agi-eval/docs/zh/quick_start.md)**: 环境搭建、运行示例和基本使用
+1. 框架已适配了部分公开数据集，查看 [快速开始](agi-eval/docs/zh/quick_start.md) 了解如何评测这些数据集，如果想要自定义适配更多的公开数据集可以查看 [公开数据集](agi-eval/docs/zh/common_dataset.md)。
 
-### 🛠️ 开发指南
-- **[插件开发指南](agi-eval/docs/zh/component/plugin_guides.md)**: 框架架构和插件开发指南
+2. 框架也支持对任意格式的数据集进行评测，查看 [自定义数据集](agi-eval/docs/zh/custom_dataset.md) 了解如何适配自定义数据集。
+
+3. 框架支持了很大程度的定制化开发能力即 [插件体系](agi-eval/docs/zh/component/plugin_system.md)，查看 [插件开发指南](agi-eval/docs/zh/component/plugin_guides.md) 了解如果定制插件。
+
+
 
 ---
 

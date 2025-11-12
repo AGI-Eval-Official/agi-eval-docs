@@ -68,3 +68,5 @@ nav:
     - Development Guide:
       - Adapt Datasets: agi-eval/docs/en/custom_dataset.md
       - Plugin Development Guide: agi-eval/docs/en/component/plugin_guides.md
+  - Public Datasets:
+    - Adapted dataset: dataset_list.md
